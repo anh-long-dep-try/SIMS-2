@@ -1,0 +1,416 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\New-SIMS\\SIMS(2)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\sims(2).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\sims(2).csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\repositories\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\repositories\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\repositories\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\repositories\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\repositories\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\repositories\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\admin\\managerpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\admin\\managerpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\faculty\\facultypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\faculty\\facultypage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\student\\studentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\student\\studentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\academiccalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\academiccalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|d:\\new-sims\\sims(2)\\sims(2)\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687BD0E2-1F18-470E-8855-6338802BB44D}|SIMS(2)\\SIMS(2).csproj|solutionrelative:sims(2)\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\User\\Login.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:34:04.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Services\\AuthService.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Services\\AuthService.cs",
+              "RelativeToolTip": "SIMS(2)\\Services\\AuthService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:29:51.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SIMS(2)\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAD4vxcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:27:48.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Repositories\\CourseRepository.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\CourseRepository.cs",
+              "RelativeToolTip": "SIMS(2)\\Repositories\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:26:54.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Program.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Program.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Program.cs",
+              "RelativeToolTip": "SIMS(2)\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:25:28.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Repositories\\StudentRepository.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\StudentRepository.cs",
+              "RelativeToolTip": "SIMS(2)\\Repositories\\StudentRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwBAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:21:25.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Repositories\\ICourseRepository.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\ICourseRepository.cs",
+              "RelativeToolTip": "SIMS(2)\\Repositories\\ICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:20:56.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Controllers\\UserController.cs",
+              "RelativeToolTip": "SIMS(2)\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:03:07.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAwK0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:09:36.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Repositories\\IStudentRepository.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Repositories\\IStudentRepository.cs",
+              "RelativeToolTip": "SIMS(2)\\Repositories\\IStudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:20:12.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\Student.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Student.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\Student.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:06:05.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SIMS(2).csproj",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\SIMS(2).csproj",
+              "RelativeDocumentMoniker": "SIMS(2)\\SIMS(2).csproj",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\SIMS(2).csproj",
+              "RelativeToolTip": "SIMS(2)\\SIMS(2).csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-22T08:01:58.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FacultyPage.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Faculty\\FacultyPage.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\Faculty\\FacultyPage.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Faculty\\FacultyPage.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\Faculty\\FacultyPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:12:20.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "SIMS(2)\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIA7wBQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:02:45.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentPage.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Student\\StudentPage.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\Student\\StudentPage.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Student\\StudentPage.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\Student\\StudentPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:12:39.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManagerPage.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Admin\\ManagerPage.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\Admin\\ManagerPage.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\Admin\\ManagerPage.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\Admin\\ManagerPage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:11:50.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "SIMS(2)\\Views\\User\\Register.cshtml",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "SIMS(2)\\Views\\User\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T08:11:17.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\Course.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Course.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\Course.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:07:37.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AcademicCalendar.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\AcademicCalendar.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\AcademicCalendar.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\AcademicCalendar.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\AcademicCalendar.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:06:50.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Faculty.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Faculty.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\Faculty.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Faculty.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\Faculty.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:05:29.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\Admin.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Admin.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:04:45.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\User.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\User.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\User.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\User.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwB8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:04:08.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "SIMS(2)\\Models\\Role.cs",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\Models\\Role.cs",
+              "RelativeToolTip": "SIMS(2)\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T08:03:31.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\appsettings.json",
+              "RelativeDocumentMoniker": "SIMS(2)\\appsettings.json",
+              "ToolTip": "D:\\New-SIMS\\SIMS(2)\\SIMS(2)\\appsettings.json",
+              "RelativeToolTip": "SIMS(2)\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-22T08:01:34.052Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
