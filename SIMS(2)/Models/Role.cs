@@ -8,7 +8,7 @@ namespace SIMS_2_.Models
         public int RoleId { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)] // Match the database schema (nvarchar(100))
         public string RoleName { get; set; }
     }
 }

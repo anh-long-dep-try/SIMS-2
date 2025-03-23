@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIMS_2_.Models
 {
@@ -12,16 +12,23 @@ namespace SIMS_2_.Models
         [StringLength(100)]
         public string CourseName { get; set; }
 
-        public string Description { get; set; } // Optional field.
+        [Required]
+        [StringLength(10)]
+        public string CourseCode { get; set; }
 
         [Required]
         public int Credits { get; set; }
 
-        // Foreign Key to Faculty.
+        [Required]
         [ForeignKey("Faculty")]
         public int FacultyId { get; set; }
+        public Faculty Faculty { get; set; }
 
-        // Navigation property.
-        Faculty Faculty { get; }
+        [Required]
+        [ForeignKey("AcademicCalendar")]
+        public int CalendarId { get; set; }
+        public AcademicCalendar AcademicCalendar { get; set; }
+
+        public List<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
 }

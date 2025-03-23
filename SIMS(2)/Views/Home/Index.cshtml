@@ -94,7 +94,6 @@
             background: linear-gradient(45deg, var(--accent), var(--primary));
         }
 
-        /* Hiệu ứng 3D cho khối lập phương */
         .cube-container {
             position: absolute;
             top: 50%;
@@ -131,13 +130,11 @@
         .cube-face.top    { transform: rotateX(90deg) translateZ(100px); }
         .cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-        /* Hiệu ứng nổi cho tiêu đề */
         @@keyframes float {
             0%, 100% { transform: translateY(0) translateZ(20px); }
             50% { transform: translateY(-10px) translateZ(30px); }
         }
 
-        /* Hiệu ứng xoay cho khối lập phương */
         @@keyframes rotate {
             0% { transform: rotateX(0deg) rotateY(0deg); }
             100% { transform: rotateX(360deg) rotateY(360deg); }
