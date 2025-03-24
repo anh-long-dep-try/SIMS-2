@@ -10,5 +10,6 @@ namespace SIMS_2_.Controllers
         {
             return View();
         }
+
     }
 }
