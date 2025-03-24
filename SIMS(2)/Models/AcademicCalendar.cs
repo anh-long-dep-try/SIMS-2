@@ -8,13 +8,13 @@ namespace SIMS_2_.Models
         public int CalendarId { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Semester { get; set; }
-
-        [Required]
         public DateTime StartDate { get; set; }
 
         [Required]
         public DateTime EndDate { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Semester { get; set; }
     }
 }

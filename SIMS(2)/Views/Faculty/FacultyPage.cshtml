@@ -1,6 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Faculty Dashboard - SIMS";
+    Layout = null;
 }
-<h1>Faculty</h1>
+
+<h2>Faculty Dashboard</h2>
+<p>Welcome, @@HttpContext.Session.GetString("UserName")! You are logged in as a Faculty member.</p>
+<a asp-controller="User" asp-action="Logout">Logout</a>

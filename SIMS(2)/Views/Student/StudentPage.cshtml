@@ -1,6 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Student Dashboard - SIMS";
 }
-<h1>Student Page</h1>
+
+<h2>Student Dashboard</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<h3>Enroll in a Course</h3>
+<form asp-action="Enroll" method="post">
+    <div class="form-group">
+        <label for="courseId">Course ID</label>
+        <input type="number" id="courseId" name="courseId" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Enroll</button>
+</form>

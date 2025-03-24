@@ -1,0 +1,10 @@
+# Ignore bin and obj directories
+bin/
+obj/
+
+# Ignore runtime and generated files
+*.dll
+*.exe
+*.pdb
+*.staticwebassets.endpoints.json
+*.staticwebassets.runtime.json

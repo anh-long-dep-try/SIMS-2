@@ -1,40 +1,30 @@
-﻿namespace SIMS_2_.Services
+﻿using System.Collections.Generic;
+using System.Linq;
+using SIMS_2_.Models;
+
+namespace SIMS_2_.Services
 {
     public class AuthService
     {
         private static AuthService _instance;
-        private static readonly object _lock = new object();
+        private List<User> _users;
 
-        private AuthService() { }
-
-        public static AuthService Instance
+        private AuthService()
         {
-            get
+            // Simulated user database
+            _users = new List<User>
             {
-                if (_instance == null)
-                {
-                    lock (_lock)
-                    {
-                        _instance ??= new AuthService();
-                    }
-                }
-                return _instance;
-            }
+                new User { UserId = 1, UserName = "student", Password = "student", RoleId = 1, Email = "student@gamil.com" },
+                new User { UserId = 4, UserName = "faculty", Password = "faculty", RoleId = 2, Email = "faculty@gmail.com" },
+                new User { UserId = 5, UserName = "admin", Password = "adminn", RoleId = 3, Email = "admin@gmail.com" }
+            };
         }
 
-        public bool Authenticate(string username, string password)
-        {
-            // Simulate authentication logic (replace with actual database check)
-            // For demo, assume "admin" user with password "admin123"
-            return username == "admin" && password == "admin123";
-        }
+        public static AuthService Instance => _instance ??= new AuthService();
 
-        public string GetUserRole(string username)
+        public User Authenticate(string username, string password)
         {
-            // Simulate role retrieval (replace with actual database query)
-            // For demo, return "Admin" for "admin" user
-            if (username == "admin") return "Admin";
-            return "Student"; // Default role
+            return _users.FirstOrDefault(u => u.UserName == username && u.Password == password);
         }
     }
 }
