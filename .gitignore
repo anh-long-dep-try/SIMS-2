@@ -16,4 +16,3 @@ bin/
 
 # Copilot indices (if you don’t need them tracked)
 .vs/*/CopilotIndices/
-/SIMS(2)/appsettings.json
