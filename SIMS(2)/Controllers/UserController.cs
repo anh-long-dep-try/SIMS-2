@@ -16,7 +16,7 @@ namespace SIMS_2_.Controllers
 
         public UserController(AppDbContext dbContext)
         {
-            _dbContext = dbContext;
+            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
         [HttpGet]
@@ -29,14 +29,44 @@ namespace SIMS_2_.Controllers
         public IActionResult Register(User user)
         {
             user.RoleId = 1; // Hardcode to Student role
+            Console.WriteLine($"Register POST: UserName={user.UserName}, Email={user.Email}, Password={user.Password}, RoleId={user.RoleId}");
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                Console.WriteLine("ModelState invalid: " + string.Join(", ", errors));
+                ViewBag.Error = "Validation failed: " + string.Join(", ", errors);
+                return View(user);
+            }
+
+            try
+            {
+                if (!_dbContext.Database.CanConnect())
                 {
-                    user.CreatedAt = DateTime.Now;
+                    Console.WriteLine("Database connection failed.");
+                    ViewBag.Error = "Cannot connect to the database.";
+                    return View(user);
+                }
+
+                if (_dbContext.Users.Any(u => u.UserName == user.UserName))
+                {
+                    Console.WriteLine("Username already exists.");
+                    ViewBag.Error = "Username already exists.";
+                    return View(user);
+                }
+                if (_dbContext.Users.Any(u => u.Email == user.Email))
+                {
+                    Console.WriteLine("Email already exists.");
+                    ViewBag.Error = "Email already exists.";
+                    return View(user);
+                }
+
+                user.CreatedAt = DateTime.Now;
+                using (var transaction = _dbContext.Database.BeginTransaction())
+                {
                     _dbContext.Users.Add(user);
-                    _dbContext.SaveChanges();
+                    int userRowsAffected = _dbContext.SaveChanges();
+                    Console.WriteLine($"User saved: {userRowsAffected} rows affected, UserId={user.UserId}");
 
                     var student = new Student
                     {
@@ -46,24 +76,28 @@ namespace SIMS_2_.Controllers
                         UserId = user.UserId
                     };
                     _dbContext.Students.Add(student);
-                    _dbContext.SaveChanges();
+                    int studentRowsAffected = _dbContext.SaveChanges();
+                    Console.WriteLine($"Student saved: {studentRowsAffected} rows affected, StudentId={student.StudentId}");
 
-                    return RedirectToAction("Login");
+                    transaction.Commit();
                 }
-                catch (DbUpdateException ex)
-                {
-                    if (ex.InnerException?.Message.Contains("UNIQUE KEY constraint") == true)
-                    {
-                        ViewBag.Error = "Username or email already exists.";
-                    }
-                    else
-                    {
-                        ViewBag.Error = "An error occurred while saving your data. Please try again.";
-                    }
-                }
+
+                TempData["Success"] = "Registration successful! Please log in.";
+                Console.WriteLine("Registration successful, redirecting to Login");
+                return RedirectToAction("Login");
             }
-
-            return View(user);
+            catch (DbUpdateException ex)
+            {
+                Console.WriteLine($"DbUpdateException: {ex.InnerException?.Message}");
+                ViewBag.Error = "Database error: " + (ex.InnerException?.Message ?? ex.Message);
+                return View(user);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"General Exception: {ex.Message}");
+                ViewBag.Error = "An unexpected error occurred: " + ex.Message;
+                return View(user);
+            }
         }
 
         [HttpGet]

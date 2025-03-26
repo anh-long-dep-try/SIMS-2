@@ -24,7 +24,7 @@ namespace SIMS_2_.Models
         [Required]
         [ForeignKey("Role")]
         public int RoleId { get; set; }
-        public Role Role { get; set; }
+        public Role? Role { get; set; }
 
         [Required]
         public DateTime CreatedAt { get; set; }
