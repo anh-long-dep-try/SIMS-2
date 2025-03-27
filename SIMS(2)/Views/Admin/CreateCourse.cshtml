@@ -1,0 +1,60 @@
+﻿@model SIMS_2_.Models.Course
+
+@{
+    ViewData["Title"] = "Create Course";
+}
+
+<h2>Create New Course</h2>
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-warning">@ViewBag.ErrorMessage</div>
+}
+
+@if (ViewBag.ValidationErrors != null && ViewBag.ValidationErrors.Count > 0)
+{
+    <div class="alert alert-danger">
+        <h4>Error:</h4>
+        <ul>
+            @foreach (var error in ViewBag.ValidationErrors)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    </div>
+}
+<form asp-action="CreateCourse" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="CourseName" class="control-label"></label>
+        <input asp-for="CourseName" class="form-control" />
+        <span asp-validation-for="CourseName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CourseCode" class="control-label"></label>
+        <input asp-for="CourseCode" class="form-control" />
+        <span asp-validation-for="CourseCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Credits" class="control-label"></label>
+        <input asp-for="Credits" class="form-control" />
+        <span asp-validation-for="Credits" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FacultyId" class="control-label">Faculty</label>
+        <select asp-for="FacultyId" class="form-control" asp-items="@(new SelectList(ViewBag.Faculties, "FacultyId", "Name"))"></select>
+        <span asp-validation-for="FacultyId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CalendarId" class="control-label">Academic Calendar</label>
+        <select asp-for="CalendarId" class="form-control" asp-items="@(new SelectList(ViewBag.Calendars, "CalendarId", "Semester"))"></select>
+        <span asp-validation-for="CalendarId" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="ManagerPage" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
