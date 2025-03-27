@@ -22,12 +22,12 @@ namespace SIMS_2_.Models
         [Required]
         [ForeignKey("Faculty")]
         public int FacultyId { get; set; }
-        public Faculty Faculty { get; set; }
+        public Faculty? Faculty { get; set; }
 
         [Required]
         [ForeignKey("AcademicCalendar")]
         public int CalendarId { get; set; }
-        public AcademicCalendar AcademicCalendar { get; set; }
+        public AcademicCalendar? AcademicCalendar { get; set; }
 
         public List<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
