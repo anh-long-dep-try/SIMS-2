@@ -24,6 +24,8 @@ namespace SIMS_2_.Controllers
             var courses = await _context.Courses
                 .Include(c => c.Faculty)
                 .Include(c => c.AcademicCalendar)
+                .Include(c => c.Enrollments)
+                    .ThenInclude(e => e.Student)
                 .ToListAsync();
             return View(courses);
         }
@@ -208,5 +210,152 @@ namespace SIMS_2_.Controllers
         {
             return _context.Courses.Any(e => e.CourseId == id);
         }
+
+        // GET: Add Student to Course
+        [HttpGet]
+        public async Task<IActionResult> AddStudentToCourse(int courseId)
+        {
+            var course = await _context.Courses.FindAsync(courseId);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.CourseId = courseId;
+            ViewBag.Students = await _context.Students.ToListAsync();
+            return View();
+        }
+
+        // POST: Add Student to Course
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddStudentToCourse(int courseId, int studentId)
+        {
+            var course = await _context.Courses.FindAsync(courseId);
+            var student = await _context.Students.FindAsync(studentId);
+
+            if (course == null || student == null)
+            {
+                return NotFound();
+            }
+
+            var enrollment = new Enrollment
+            {
+                CourseId = courseId,
+                StudentId = studentId,
+                EnrollmentDate = DateTime.Now
+            };
+
+            _context.Enrollments.Add(enrollment);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Student added to course successfully!";
+            return RedirectToAction(nameof(ManagerPage));
+        }
+        // GET: Enroll Student in Course
+        [HttpGet]
+        public async Task<IActionResult> EnrollStudent()
+        {
+            var students = await _context.Students.ToListAsync();
+            var courses = await _context.Courses.ToListAsync();
+
+            // Check if dropdowns have data; if not, provide feedback
+            if (!students.Any() || !courses.Any())
+            {
+                TempData["ErrorMessage"] = "Cannot enroll a student because there are no students or courses available.";
+                return RedirectToAction(nameof(ManagerPage));
+            }
+
+            ViewBag.Students = students;
+            ViewBag.Courses = courses;
+
+            return View();
+        }
+
+        // POST: Enroll Student in Course
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EnrollStudent(int courseId, int studentId, string grade)
+        {
+            var course = await _context.Courses.FindAsync(courseId);
+            var student = await _context.Students.FindAsync(studentId);
+
+            if (course == null || student == null)
+            {
+                return NotFound();
+            }
+
+            var enrollment = new Enrollment
+            {
+                CourseId = courseId,
+                StudentId = studentId,
+                EnrollmentDate = DateTime.Now,
+                Grade = grade 
+            };
+
+            _context.Enrollments.Add(enrollment);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Student enrolled in course successfully!";
+            return RedirectToAction(nameof(ManagerPage));
+        }
+
+
+
+        // GET: Edit Student Enrollment
+        [HttpGet]
+        public async Task<IActionResult> EditStudentEnrollment(int enrollmentId)
+        {
+            var enrollment = await _context.Enrollments
+                .Include(e => e.Course)
+                .Include(e => e.Student)
+                .FirstOrDefaultAsync(e => e.EnrollmentId == enrollmentId);
+
+            if (enrollment == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.Students = await _context.Students.ToListAsync();
+            return View(enrollment);
+        }
+
+        // POST: Edit Student Enrollment
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditStudentEnrollment(int enrollmentId, int studentId)
+        {
+            var enrollment = await _context.Enrollments.FindAsync(enrollmentId);
+            var student = await _context.Students.FindAsync(studentId);
+
+            if (enrollment == null || student == null)
+            {
+                return NotFound();
+            }
+
+            enrollment.StudentId = studentId;
+            _context.Update(enrollment);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Student enrollment updated successfully!";
+            return RedirectToAction(nameof(ManagerPage));
+        }
+
+        // POST: Delete Student Enrollment
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteStudentEnrollment(int enrollmentId)
+        {
+            var enrollment = await _context.Enrollments.FindAsync(enrollmentId);
+            if (enrollment != null)
+            {
+                _context.Enrollments.Remove(enrollment);
+                await _context.SaveChangesAsync();
+            }
+
+            TempData["SuccessMessage"] = "Student enrollment deleted successfully!";
+            return RedirectToAction(nameof(ManagerPage));
+        }
+
     }
 }
