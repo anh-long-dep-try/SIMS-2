@@ -1,5 +1,7 @@
 ﻿using SIMS_2_.Data;
 using SIMS_2_.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace SIMS_2_.Repositories
 {
@@ -20,7 +22,10 @@ namespace SIMS_2_.Repositories
 
         public Student Get(int id)
         {
-            return _db.Students.Find(id);
+            return _db.Students
+                .Include(s => s.User)
+                .Include(s => s.Enrollments)
+                .FirstOrDefault(s => s.StudentId == id);
         }
 
         public void Update(Student student)
@@ -39,11 +44,15 @@ namespace SIMS_2_.Repositories
             }
         }
 
-        public IEnumerable<Student> GetAll()
+        public IQueryable<Student> GetAll()
         {
-            return _db.Students.ToList();
+            return _db.Students.AsQueryable();
         }
 
-        
+        public void AddEnrollment(Enrollment enrollment)
+        {
+            _db.Enrollments.Add(enrollment);
+            _db.SaveChanges();
+        }
     }
 }

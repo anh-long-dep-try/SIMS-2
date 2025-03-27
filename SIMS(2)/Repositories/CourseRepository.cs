@@ -1,5 +1,8 @@
 ﻿using SIMS_2_.Data;
 using SIMS_2_.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SIMS_2_.Repositories
 {
@@ -20,7 +23,11 @@ namespace SIMS_2_.Repositories
 
         public Course Get(int id)
         {
-            return _db.Courses.Find(id);
+            return _db.Courses
+                .Include(c => c.Faculty)
+                .Include(c => c.AcademicCalendar)
+                .Include(c => c.Enrollments)
+                .FirstOrDefault(c => c.CourseId == id);
         }
 
         public void Update(Course course)
@@ -41,7 +48,11 @@ namespace SIMS_2_.Repositories
 
         public IEnumerable<Course> GetAll()
         {
-            return _db.Courses.ToList();
+            return _db.Courses
+                .Include(c => c.Faculty)
+                .Include(c => c.AcademicCalendar)
+                .Include(c => c.Enrollments)
+                .ToList();
         }
     }
 }
