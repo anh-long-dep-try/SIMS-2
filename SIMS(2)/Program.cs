@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using SIMS_2_.Data;
+using SIMS_2_.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddControllersWithViews();
 // Add DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 
 // Add session support
 builder.Services.AddDistributedMemoryCache();
@@ -46,17 +50,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Add authentication and authorization middleware
+// Correct middleware order: UseSession before UseAuthentication
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 // Seed the database
 using (var scope = app.Services.CreateScope())
