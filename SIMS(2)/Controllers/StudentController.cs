@@ -6,7 +6,7 @@ using SIMS_2_.Repositories;
 
 namespace SIMS_2_.Controllers
 {
-    [Authorize(Roles = "Student")]
+    [Authorize(Roles = "Student")] 
     public class StudentController : Controller
     {
         private readonly IStudentRepository _studentRepository;
@@ -22,7 +22,7 @@ namespace SIMS_2_.Controllers
 
         public IActionResult StudentPage()
         {
-            // Get the logged-in user's ID from claims
+            // get the user id 
             var userIdClaim = User.FindFirst("UserId");
             if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out int userId))
             {
@@ -40,7 +40,7 @@ namespace SIMS_2_.Controllers
                 return NotFound();
             }
 
-            // Fetch the student's enrollments with course details
+            // get student's enrollments
             var enrollments = _studentRepository.GetAll()
                 .Include(s => s.Enrollments)
                     .ThenInclude(e => e.Course)
@@ -59,7 +59,7 @@ namespace SIMS_2_.Controllers
                 .Where(c => !enrolledCourseIds.Contains(c.CourseId))
                 .ToList();
 
-            // Create the view model
+            // return to the view
             var viewModel = new StudentPageViewModel
             {
                 Student = student,
@@ -72,9 +72,9 @@ namespace SIMS_2_.Controllers
         }
 
         [HttpPost]
-        public IActionResult Enroll(int courseId)
+        public IActionResult Enroll(int courseId) //*Note:this function is still not working
         {
-            // Get the logged-in user's ID from claims
+            // get the user id 
             var userIdClaim = User.FindFirst("UserId");
             if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out int userId))
             {
@@ -82,7 +82,7 @@ namespace SIMS_2_.Controllers
                 return RedirectToAction("Login", "User");
             }
 
-            // Fetch the student associated with the user
+            //find the student by id
             var student = _studentRepository.GetAll()
                 .FirstOrDefault(s => s.UserId == userId);
             if (student == null)
@@ -99,7 +99,7 @@ namespace SIMS_2_.Controllers
                 return RedirectToAction("StudentPage");
             }
 
-            // Check if the student is already enrolled in the course
+            // check if the student is already enrolled in the course
             var existingEnrollment = _studentRepository.GetAll()
                 .Include(s => s.Enrollments)
                 .FirstOrDefault(s => s.StudentId == student.StudentId)?
