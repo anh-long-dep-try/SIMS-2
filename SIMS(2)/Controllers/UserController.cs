@@ -18,14 +18,12 @@ namespace SIMS_2_.Controllers
             _context = context;
         }
 
-        // GET: /User/Login
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-        // POST: /User/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string username, string password)
@@ -84,13 +82,13 @@ namespace SIMS_2_.Controllers
             }
         }
 
-        // GET: /User/AccessDenied
+        
         public IActionResult AccessDenied()
         {
             return View();
         }
 
-        // POST: /User/Logout
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
