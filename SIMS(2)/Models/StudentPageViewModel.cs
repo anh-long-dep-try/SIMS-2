@@ -7,7 +7,7 @@ namespace SIMS_2_.Models
     {
         public Student Student { get; set; }
         public List<Enrollment> Enrollments { get; set; }
-        public List<Course> AvailableCourses { get; set; }
-        public List<Enrollment> Schedule { get; set; } // Using Enrollment for now to derive schedule
+        public List<Course> AvailableCourses { get; set; }//the course that the student is not enrolled in (dropdown)
+        public List<Enrollment> Schedule { get; set; } //display the course schedule (fetch from enrollment) 
     }
 }
