@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SIMS_2_.Models.FacultyPageViewModel
+
+@{
     ViewData["Title"] = "Faculty Dashboard - SIMS";
     Layout = null;
 }
@@ -6,3 +8,28 @@
 <h2>Faculty Dashboard</h2>
 <p>Welcome, @@HttpContext.Session.GetString("UserName")! You are logged in as a Faculty member.</p>
 <a asp-controller="User" asp-action="Logout">Logout</a>
+
+<!-- Add a table to list students and their grades with an edit link -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var enrollment in Model.Enrollments)
+        {
+            <tr>
+                <td>@enrollment.Student.Name</td>
+                <td>@enrollment.Course.CourseName</td>
+                <td>@enrollment.Grade</td>
+                <td>
+                    <a asp-action="EditGrade" asp-route-enrollmentId="@enrollment.EnrollmentId" class="btn btn-sm btn-warning">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

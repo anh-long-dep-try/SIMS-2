@@ -3,18 +3,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SIMS_2_.Data;
 using SIMS_2_.Models;
+using SIMS_2_.Repositories;
 
 namespace SIMS_2_.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly ICourseRepository _courseRepository;
+        private readonly IStudentRepository _studentRepository;
         private readonly ILogger<AdminController> _logger;
+        private readonly AppDbContext _context;
 
-        public AdminController(AppDbContext context, ILogger<AdminController> logger)
+        public AdminController(
+            ICourseRepository courseRepository,
+            IStudentRepository studentRepository,
+            ILogger<AdminController> logger)
         {
-            _context = context;
+            _courseRepository = courseRepository;
+            _studentRepository = studentRepository;
             _logger = logger;
         }
 
@@ -317,23 +324,26 @@ namespace SIMS_2_.Controllers
             }
 
             ViewBag.Students = await _context.Students.ToListAsync();
+            ViewBag.Courses = await _context.Courses.ToListAsync(); // Added courses
             return View(enrollment);
         }
 
         // POST: Edit Student Enrollment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditStudentEnrollment(int enrollmentId, int studentId)
+        public async Task<IActionResult> EditStudentEnrollment(int enrollmentId, int studentId, int courseId)
         {
             var enrollment = await _context.Enrollments.FindAsync(enrollmentId);
             var student = await _context.Students.FindAsync(studentId);
+            var course = await _context.Courses.FindAsync(courseId);
 
-            if (enrollment == null || student == null)
+            if (enrollment == null || student == null || course == null)
             {
                 return NotFound();
             }
 
             enrollment.StudentId = studentId;
+            enrollment.CourseId = courseId; // Added course update
             _context.Update(enrollment);
             await _context.SaveChangesAsync();
 

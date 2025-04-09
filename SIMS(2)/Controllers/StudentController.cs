@@ -72,7 +72,7 @@ namespace SIMS_2_.Controllers
         }
 
         [HttpPost]
-        public IActionResult Enroll(int courseId) //*Note:this function is still not working
+        public IActionResult Enroll(int courseId) 
         {
             // get the user id 
             var userIdClaim = User.FindFirst("UserId");

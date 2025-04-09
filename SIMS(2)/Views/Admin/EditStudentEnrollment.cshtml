@@ -4,22 +4,53 @@
     ViewData["Title"] = "Edit Student Enrollment";
 }
 
-<h2>Edit Student Enrollment</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Keep your existing styles -->
+    <style>
+        /* Your existing CSS remains the same */
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Edit Student Enrollment</h2>
+            </div>
+            <div class="card-body">
+                <form asp-action="EditStudentEnrollment" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="EnrollmentId" />
 
-<form asp-action="EditStudentEnrollment" method="post">
-    @Html.AntiForgeryToken()
-    <input type="hidden" asp-for="EnrollmentId" />
-    <div class="form-group">
-        <label for="studentId" class="control-label">Student</label>
-        <select id="studentId" name="studentId" class="form-control" asp-items="@(new SelectList(ViewBag.Students, "StudentId", "Name"))"></select>
-        <span asp-validation-for="StudentId" class="text-danger"></span>
-    </div>
-    <div class="form-group mt-3">
-        <input type="submit" value="Save" class="btn btn-primary" />
-        <a asp-action="ManagerPage" class="btn btn-secondary">Cancel</a>
-    </div>
-</form>
+                    <div class="form-group">
+                        <label for="studentId" class="control-label">Student</label>
+                        <select id="studentId" name="studentId" class="form-control"
+                                asp-items="@(new SelectList(ViewBag.Students, "StudentId", "Name", Model.StudentId))"></select>
+                        <span asp-validation-for="StudentId" class="text-danger"></span>
+                    </div>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+                    <div class="form-group">
+                        <label for="courseId" class="control-label">Course</label>
+                        <select id="courseId" name="courseId" class="form-control"
+                                asp-items="@(new SelectList(ViewBag.Courses, "CourseId", "CourseName", Model.CourseId))"></select>
+                        <span asp-validation-for="CourseId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a asp-action="ManagerPage" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
